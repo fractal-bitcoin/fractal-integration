@@ -1,15 +1,16 @@
 {
-  "name": "fractal-address-generation-validation",
+  "name": "fractal-integration",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "demo": "ts-node src/index.ts"
+    "gen:address": "ts-node src/gen-address.ts",
+    "gen:transaction": "ts-node src/gen-transaction.ts"
   },
   "license": "MIT",
   "dependencies": {
     "@bitcoinerlab/secp256k1": "^1.2.0",
     "bitcoinjs-lib": "^6.1.7",
-    "ecpair": "^3.0.0"
+    "ecpair": "^2.1.0"
   },
   "devDependencies": {
     "typescript": "^5.8.3",
