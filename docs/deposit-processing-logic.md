@@ -77,12 +77,10 @@ When a relevant output is identified in `block_hash` at `block_height`:
 
 ### Step 4.5: Tracking Confirmations
 
-With every new block added to the chain (`current_block_height` obtained via `getblockcount`):
+Our Confirmation Service periodically queries the status of transactions where `status = 'pending'`.
 
-1.  Query your processing database for all deposits with `status = 'pending'`.
-2.  For each pending deposit, calculate its current confirmations:
-    `confirmations = current_block_height - deposit_block_height + 1`
-3.  Update the `confirmations` count in your database for that deposit record.
+1.  For each pending deposit, calculate its current confirmations, uses the `getrawtransaction <txid> true <blockhash>` and checks the confirmations field.
+2.  Update the `confirmations` count in your database for that deposit record.
 
 ### Step 4.6: Crediting User Accounts
 
