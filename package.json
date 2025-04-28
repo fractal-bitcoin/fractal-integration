@@ -1,0 +1,19 @@
+{
+  "name": "fractal-address-generation-validation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "demo": "ts-node src/index.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@bitcoinerlab/secp256k1": "^1.2.0",
+    "bitcoinjs-lib": "^6.1.7",
+    "ecpair": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "ts-node": "^10.9.2",
+    "@types/node": "^22.15.2"
+  }
+}
